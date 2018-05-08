@@ -639,7 +639,9 @@ class Chatbot:
         modelName = os.path.join(self.modelDir, self.MODEL_NAME_BASE)
         if self.args.keepAll:  # We do not erase the previously saved model by including the current step on the name
             modelName += '-' + str(self.globStep)
-        return modelName + self.MODEL_EXT
+        # return modelName + self.MODEL_EXT
+        return self.modelDir
+        
 
     def getDevice(self):
         """ Parse the argument to decide on which device run the model
